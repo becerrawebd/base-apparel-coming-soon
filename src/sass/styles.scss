@@ -1,0 +1,42 @@
+@import "variables";
+@import "header";
+@import "hero";
+@import "main";
+@import "form";
+@import "footer";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Josefin Sans',
+        sans-serif;
+    height: 100vh;
+    background-image: url(../../static/img/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 35% 50% 5%;
+    grid-template-areas: "a header b"
+        "hero hero hero"
+        "e main f"
+        "footer footer footer";
+
+    @media screen and (min-width: 1024px) {
+        background-size: contain;
+        grid-template-columns: 10% 30% 10% 50%;
+        grid-template-rows: 15% 10% 60% 10% 5%;
+        grid-template-areas: "a header b hero"
+            "c d e hero"
+            "f main g hero"
+            "h i j hero"
+            "footer footer footer hero";
+    }
+}

@@ -1,0 +1,42 @@
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+    h1 {
+        text-transform: uppercase;
+        color: $DesaturatedRed;
+        font-weight: 300;
+        letter-spacing: 10px;
+        font-size: 40px;
+
+        span {
+            color: $DarkGrayishRed;
+            font-weight: 600;
+        }
+    }
+
+    p {
+        color: $DesaturatedRed;
+        font-weight: 400;
+        font-size: .8rem;
+        line-height: 1.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+    }
+
+}

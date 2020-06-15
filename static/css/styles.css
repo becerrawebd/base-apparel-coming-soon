@@ -1,0 +1,173 @@
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+}
+.header .logo {
+  height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .header .logo {
+    height: 35px;
+  }
+}
+
+.hero {
+  grid-area: hero;
+  background-image: url("../../static/img/hero-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-image: url("../../static/img/hero-desktop.jpg");
+  }
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.main h1 {
+  text-transform: uppercase;
+  color: #ce9797;
+  font-weight: 300;
+  letter-spacing: 10px;
+  font-size: 40px;
+}
+.main h1 span {
+  color: #413a3a;
+  font-weight: 600;
+}
+.main p {
+  color: #ce9797;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .main h1 {
+    font-size: 5rem;
+  }
+  .main p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    text-align: left;
+  }
+}
+
+.form {
+  position: relative;
+}
+.form .absolute {
+  position: absolute;
+  padding-top: 0.5rem;
+}
+.form .error_text {
+  color: #f96262;
+}
+.form .ok_text {
+  color: green;
+}
+.form .div_input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(206, 151, 151, 0.5);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background: #fff;
+  border-right: none;
+  position: relative;
+}
+.form .div_input .ocultar {
+  display: none;
+}
+.form .div_input .padding {
+  padding-right: 0.5rem;
+}
+.form .div_input,
+.form .div_input .input,
+.form .div_input .button {
+  border-radius: 50px;
+  outline: none;
+}
+.form .div_input .input {
+  height: 100%;
+  width: 75%;
+  font-size: 15px;
+  border: none;
+  opacity: 0.5;
+}
+.form .div_input .input::placeholder {
+  color: #ce9797;
+  font-weight: 600;
+}
+.form .div_input .button {
+  min-width: 25%;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+  transition: 0.5s ease-out;
+}
+.form .div_input .button:hover {
+  transform: scaleX(1.025);
+  box-shadow: 5px 5px 10px 1px #ce9797;
+}
+
+.footer {
+  grid-area: footer;
+  color: #ce9797;
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+  color: #ce9797;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  background-image: url(../../static/img/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% 35% 50% 5%;
+  grid-template-areas: "a header b" "hero hero hero" "e main f" "footer footer footer";
+}
+@media screen and (min-width: 1024px) {
+  body {
+    background-size: contain;
+    grid-template-columns: 10% 30% 10% 50%;
+    grid-template-rows: 15% 10% 60% 10% 5%;
+    grid-template-areas: "a header b hero" "c d e hero" "f main g hero" "h i j hero" "footer footer footer hero";
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
